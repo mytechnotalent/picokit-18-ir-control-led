@@ -1,0 +1,68 @@
+{
+  "repo": "picokit-18-ir-control-led",
+  "eyebrow": "PICOKIT // LESSON 18",
+  "title": "PICOKIT // IR CONTROL LED",
+  "subtitle": "REMOTE LAMP SELECT + AUTHENTICATED HEARTBEAT",
+  "accent": "#FF4784",
+  "dim": "#9E2C51",
+  "white": "#F3DCED",
+  "cyan": "#7FD8E0",
+  "bg": "#110409",
+  "bg_edge": "#050102",
+  "icon": "remote",
+  "panel_status": "LAMP 2  ·  GREEN  ·  AEAD :ON",
+  "chips": [
+    {
+      "label": "REMOTE",
+      "value": "NEC"
+    },
+    {
+      "label": "LAMP",
+      "value": "GREEN"
+    },
+    {
+      "label": "KEY",
+      "value": "argon2id"
+    },
+    {
+      "label": "RADIO",
+      "value": "-36 dBm"
+    }
+  ],
+  "terminal": [
+    "$ gateway listen /dev/cu.usbserial-A50285BI",
+    "[*] node 00018  seq 18  HEARTBEAT  AEAD ok",
+    "[*] anti-replay window ok  counter 18",
+    "[+] key 0x47  lamp green  onboard blink",
+    "[+] ack sent  rssi -36  snr 9.0"
+  ],
+  "categories": [
+    "REMOTE",
+    "LAMPS",
+    "SECURE",
+    "LINK"
+  ],
+  "cards": [
+    {
+      "tag": "KEY-01",
+      "label": "0x45",
+      "value": "red"
+    },
+    {
+      "tag": "KEY-02",
+      "label": "0x46",
+      "value": "yellow"
+    },
+    {
+      "tag": "KEY-03",
+      "label": "0x47",
+      "value": "green"
+    }
+  ],
+  "footer": [
+    "1 NODE  ·  1 GATEWAY  ·  2 WAY LORA  ·  NO PLAINTEXT",
+    "PICOKIT SERIES  ·  OUTPUT  ·  INPUT  ·  RADIO  ==[ LED ]=="
+  ],
+  "layout": "terminal",
+  "stat": "NEC"
+}
